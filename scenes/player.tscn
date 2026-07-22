@@ -429,3 +429,7 @@ scale = Vector2(4.375, 4.375)
 sprite_frames = SubResource("SpriteFrames_sivcj")
 animation = &"run_up"
 frame_progress = 0.7128341
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1571390883]
+limit_left = -100
+limit_bottom = 1100

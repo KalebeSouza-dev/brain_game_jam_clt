@@ -8,11 +8,14 @@ var last_direction: Vector2 = Vector2.RIGHT
 
 func _physics_process(delta: float) -> void:
 	process_movement()
+	process_animation()
 	move_and_slide()
 
+
+# ------------------------------------------------------------------------------
+# MOVEMENT & ANIMATION
+# ------------------------------------------------------------------------------
 func process_movement() -> void:
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_vector("left", "right", "up", "down")
 	
 	if direction != Vector2.ZERO:
@@ -21,14 +24,11 @@ func process_movement() -> void:
 	else:
 		velocity = Vector2.ZERO
 	
-	process_animation(last_direction)
-	
-func process_animation(direction: Vector2) -> void:
+func process_animation() -> void:
 	if velocity != Vector2.ZERO:
-		play_animation("run", direction)
+		play_animation("run", last_direction)
 	else:
-		play_animation("idle", direction)
-		
+		play_animation("idle", last_direction)
 	
 func play_animation(prefix: String, dir: Vector2) -> void:
 	if dir.x != 0: 

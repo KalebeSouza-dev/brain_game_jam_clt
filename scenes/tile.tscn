@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b48dxx7mb7h3a"]
+
+[ext_resource type="Texture2D" uid="uid://70xqrvfpgrrn" path="res://assets/asfalt.png" id="1_3dk36"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ywnoi"]
+texture = ExtResource("1_3dk36")
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+4:2/0 = 0
+4:3/0 = 0
+4:4/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+5:6/0 = 0
+4:6/0 = 0
+3:6/0 = 0
+3:5/0 = 0
+3:4/0 = 0
+3:3/0 = 0
+3:2/0 = 0
+2:4/0 = 0
+1:4/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+7:4/0 = 0
+6:4/0 = 0
+5:4/0 = 0
+5:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_sivcj"]
+sources/0 = SubResource("TileSetAtlasSource_ywnoi")
+
+[node name="tile" type="Node2D" unique_id=1938073759]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2028343646]
+tile_set = SubResource("TileSet_sivcj")
