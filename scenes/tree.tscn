@@ -2,12 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://bxxbap8lb00sm" path="res://assets/ambientacao/Maple Tree.png" id="1_avsvi"]
 
-[node name="Node2D" type="Node2D" unique_id=401643845]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avsvi"]
+size = Vector2(53, 56)
+
+[node name="tree" type="Node2D" unique_id=401643845]
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1878421487]
-position = Vector2(88, 56)
+position = Vector2(0, -81)
+scale = Vector2(4, 4)
 texture = ExtResource("1_avsvi")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 48)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1434117269]
+position = Vector2(1, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=851131503]
+position = Vector2(-1, -21)
+shape = SubResource("RectangleShape2D_avsvi")

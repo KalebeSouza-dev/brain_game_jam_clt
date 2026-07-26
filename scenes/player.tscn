@@ -420,16 +420,25 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sivcj"]
+size = Vector2(38, 29)
+
 [node name="Player" type="CharacterBody2D" unique_id=2037619144]
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=829921992]
-position = Vector2(54, 54)
+y_sort_enabled = true
+position = Vector2(0, -30)
 scale = Vector2(4.375, 4.375)
 sprite_frames = SubResource("SpriteFrames_sivcj")
-animation = &"run_up"
-frame_progress = 0.7128341
+animation = &"run_right"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1571390883]
-limit_left = -100
-limit_bottom = 1100
+limit_left = 0
+limit_top = -300
+limit_right = 1153
+limit_bottom = 350
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2033859954]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_sivcj")
