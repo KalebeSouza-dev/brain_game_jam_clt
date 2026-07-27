@@ -421,24 +421,24 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sivcj"]
-size = Vector2(38, 29)
+size = Vector2(10, 4)
 
 [node name="Player" type="CharacterBody2D" unique_id=2037619144]
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=829921992]
 y_sort_enabled = true
-position = Vector2(0, -30)
-scale = Vector2(4.375, 4.375)
+position = Vector2(1, -8)
 sprite_frames = SubResource("SpriteFrames_sivcj")
-animation = &"run_right"
+animation = &"run_down"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1571390883]
+zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = -300
 limit_right = 1153
 limit_bottom = 350
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2033859954]
-position = Vector2(0, -10)
+position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_sivcj")
