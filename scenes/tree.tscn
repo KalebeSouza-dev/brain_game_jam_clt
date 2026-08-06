@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://bxxbap8lb00sm" path="res://assets/ambientacao/Maple Tree.png" id="1_avsvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avsvi"]
-size = Vector2(11, 10)
+size = Vector2(8, 14)
 
 [node name="tree" type="Node2D" unique_id=401643845]
 y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1878421487]
-position = Vector2(1, -26)
+position = Vector2(1, -28)
 texture = ExtResource("1_avsvi")
 region_enabled = true
 region_rect = Rect2(96, 0, 32, 48)
@@ -18,5 +18,5 @@ region_rect = Rect2(96, 0, 32, 48)
 position = Vector2(1, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=851131503]
-position = Vector2(0, -10)
+position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_avsvi")
