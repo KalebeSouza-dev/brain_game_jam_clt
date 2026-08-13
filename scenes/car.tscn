@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://hknsgavtu3iq" path="res://assets/car/Black_CIVIC_CLEAN_SOUTH_000-sheet.png" id="1_7822p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sivcj"]
-size = Vector2(27, 51)
+size = Vector2(25.333334, 46.666668)
 
 [node name="car" type="Node2D" unique_id=1984368804]
 scale = Vector2(1.5, 1.5)
@@ -16,5 +16,5 @@ region_rect = Rect2(29.309021, 23.63858, 40.35988, 54.74714)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=214156465]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=672098639]
-position = Vector2(0.5, 1.5)
+position = Vector2(-4.7683716e-07, 0.66666603)
 shape = SubResource("RectangleShape2D_sivcj")
