@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://brjfj62pkmiww"]
+
+[ext_resource type="Script" uid="uid://l2yjc0s57wkd" path="res://scripts/hub.gd" id="1_l10or"]
+
+[node name="HUD" type="CanvasLayer" unique_id=870494656]
+script = ExtResource("1_l10or")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=788168399]
+anchors_preset = -1
+anchor_left = 0.44010416
+anchor_top = 0.9351852
+anchor_right = 0.5598958
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Label1" type="Label" parent="HBoxContainer" unique_id=941392572]
+layout_mode = 2
+text = "vazio"
+
+[node name="Label2" type="Label" parent="HBoxContainer" unique_id=465305220]
+layout_mode = 2
+text = "vazio"
+
+[node name="Label3" type="Label" parent="HBoxContainer" unique_id=1193685628]
+layout_mode = 2
+text = "vazio"
+
+[node name="Label4" type="Label" parent="HBoxContainer" unique_id=375516817]
+layout_mode = 2
+text = "vazio"
+
+[node name="Label5" type="Label" parent="HBoxContainer" unique_id=592291465]
+layout_mode = 2
+text = "vazio"

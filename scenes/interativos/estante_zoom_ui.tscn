@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://b5gmefsik2748"]
 
 [ext_resource type="Script" uid="uid://t0m6lulgqxy6" path="res://estante_zoom_ui.gd" id="1_76wkh"]
+[ext_resource type="Texture2D" uid="uid://dcykmso2hy4k1" path="res://assets/Tiles/acessorios_oficina.png" id="2_6jlwd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sivcj"]
+atlas = ExtResource("2_6jlwd")
+region = Rect2(112, 0, 112, 16)
 
 [node name="EstanteZoomUI" type="CanvasLayer" unique_id=284721341]
 process_mode = 3
@@ -14,6 +19,14 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.6784314)
 
+[node name="Peca1" type="TextureButton" parent="ColorRect" unique_id=1227348639]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 167.0
+offset_right = 255.0
+offset_bottom = 183.0
+texture_normal = SubResource("AtlasTexture_sivcj")
+
 [node name="Button" type="Button" parent="." unique_id=1264751006]
 offset_left = 7.0
 offset_top = -3.0
@@ -21,4 +34,5 @@ offset_right = 133.0
 offset_bottom = 124.0
 text = "X"
 
+[connection signal="pressed" from="ColorRect/Peca1" to="." method="_on_peca_1_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

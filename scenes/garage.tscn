@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://blu5wedy74o06"]
 
+[ext_resource type="PackedScene" uid="uid://brjfj62pkmiww" path="res://scenes/hud.tscn" id="1_47l8i"]
 [ext_resource type="PackedScene" uid="uid://iwikvvq14yev" path="res://scenes/player.tscn" id="2_gnlqp"]
 [ext_resource type="PackedScene" uid="uid://d1xclh3jtlxv1" path="res://scenes/car2.tscn" id="3_3yerp"]
 [ext_resource type="TileSet" uid="uid://vvl6w2c2r1ry" path="res://tiles/tile_garage.tres" id="3_6thhw"]
@@ -9,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://b5gmefsik2748" path="res://scenes/interativos/estante_zoom_ui.tscn" id="6_d8qye"]
 
 [node name="garage" type="Node2D" unique_id=647982058]
+
+[node name="HUD" parent="." unique_id=870494656 instance=ExtResource("1_47l8i")]
+layer = 4
 
 [node name="Player" parent="." unique_id=2037619144 instance=ExtResource("2_gnlqp")]
 position = Vector2(83, 117)
@@ -45,13 +49,11 @@ position = Vector2(161.00002, -21)
 scale = Vector2(1.2, 1.2)
 
 [node name="estante1" parent="Tiles/objects" unique_id=1809111306 instance=ExtResource("5_3yerp")]
-visible = false
 z_index = -3
 position = Vector2(193, 143)
 cena_tela_estante = ExtResource("6_d8qye")
 
 [node name="estante2" parent="Tiles/objects" unique_id=1204929612 instance=ExtResource("5_3yerp")]
-visible = false
 z_index = -3
 position = Vector2(192, 192)
 cena_tela_estante = ExtResource("6_d8qye")
