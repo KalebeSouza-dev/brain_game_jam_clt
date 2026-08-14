@@ -1,0 +1,22 @@
+[gd_scene format=4 uid="uid://dq87e0wagssbn"]
+
+[ext_resource type="Script" uid="uid://nqecciag87g6" path="res://scripts/quadro.gd" id="1_5s1hh"]
+[ext_resource type="TileSet" uid="uid://vvl6w2c2r1ry" path="res://tiles/tile_garage.tres" id="1_6yutv"]
+[ext_resource type="PackedScene" uid="uid://c82kh5t30orpp" path="res://scenes/interativos/quadro_zoom_ui.tscn" id="2_2hj52"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sivcj"]
+size = Vector2(60, 20)
+
+[node name="quadro" type="Node2D" unique_id=303741006]
+script = ExtResource("1_5s1hh")
+cena_tela_quadro = ExtResource("2_2hj52")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=262382144]
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAABAAAAAQABAAAAAAACAAAAAQABAAAAAAADAAAAAQACAAAAAAADAAEAAQACAAIAAAAAAAEAAQAAAAIAAAABAAEAAQABAAIAAAACAAEAAQABAAIAAAA=")
+tile_set = ExtResource("1_6yutv")
+
+[node name="AreaInteracao" type="Area2D" parent="." unique_id=814985488]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaInteracao" unique_id=1142953550]
+position = Vector2(32, 27)
+shape = SubResource("RectangleShape2D_sivcj")

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c82kh5t30orpp"]
+
+[ext_resource type="Script" uid="uid://udyp0oyw7qar" path="res://scripts/quadro_zoom_ui.gd" id="1_sg6tv"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=561946312]
+process_mode = 3
+script = ExtResource("1_sg6tv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1666289685]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.08235294, 0.2901961, 0.6862745)
+
+[node name="Button" type="Button" parent="." unique_id=176929969]
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 100.0
+offset_bottom = 98.0
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

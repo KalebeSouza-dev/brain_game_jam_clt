@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b5gmefsik2748"]
+
+[ext_resource type="Script" uid="uid://t0m6lulgqxy6" path="res://estante_zoom_ui.gd" id="1_76wkh"]
+
+[node name="EstanteZoomUI" type="CanvasLayer" unique_id=284721341]
+process_mode = 3
+script = ExtResource("1_76wkh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1170007515]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6784314)
+
+[node name="Button" type="Button" parent="." unique_id=1264751006]
+offset_left = 7.0
+offset_top = -3.0
+offset_right = 133.0
+offset_bottom = 124.0
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
