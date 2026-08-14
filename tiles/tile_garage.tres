@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bn1j40ntq6vny" path="res://assets/Tiles/garage.png" id="1_72dh5"]
 [ext_resource type="Texture2D" uid="uid://o6ev3s5n5af6" path="res://assets/Tiles/ferramentas.png" id="2_2q3lx"]
 [ext_resource type="Texture2D" uid="uid://cs63swqp7ji4o" path="res://assets/Tiles/chao_oficina.png" id="3_2q3lx"]
+[ext_resource type="Texture2D" uid="uid://dcykmso2hy4k1" path="res://assets/Tiles/acessorios_oficina.png" id="4_c0m51"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_2q3lx"]
 tile_data = PackedInt32Array(0, 393216, 0, 65536, 393216, 1, 1, 458752, 0, 65537, 458752, 1)
@@ -60,6 +61,12 @@ texture = ExtResource("1_72dh5")
 7:1/0 = 0
 6:1/next_alternative_id = 2
 6:1/0 = 0
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c0m51"]
 texture = ExtResource("2_2q3lx")
@@ -119,11 +126,26 @@ texture = ExtResource("3_2q3lx")
 6:3/0 = 0
 7:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p18re"]
+texture = ExtResource("4_c0m51")
+0:0/0 = 0
+7:0/next_alternative_id = 3
+7:0/0 = 0
+0:1/0 = 0
+6:0/0 = 0
+5:0/0 = 0
+7:1/0 = 0
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+3:0/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gnlqp")
 sources/1 = SubResource("TileSetAtlasSource_c0m51")
 sources/2 = SubResource("TileSetAtlasSource_lhjtr")
+sources/3 = SubResource("TileSetAtlasSource_p18re")
 pattern_0 = SubResource("TileMapPattern_2q3lx")
 pattern_1 = SubResource("TileMapPattern_c0m51")
 pattern_2 = SubResource("TileMapPattern_lhjtr")
