@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://brjfj62pkmiww"]
 
-[ext_resource type="Script" uid="uid://l2yjc0s57wkd" path="res://scripts/hub.gd" id="1_l10or"]
+[ext_resource type="Script" uid="uid://l2yjc0s57wkd" path="res://scripts/hud.gd" id="1_l10or"]
+[ext_resource type="Texture2D" uid="uid://dkge00x8rpem2" path="res://assets/entites/kcoin.png" id="2_oo0fn"]
+
+[sub_resource type="FontVariation" id="FontVariation_oo0fn"]
 
 [node name="HUD" type="CanvasLayer" unique_id=870494656]
 script = ExtResource("1_l10or")
@@ -16,22 +19,70 @@ grow_vertical = 0
 theme_override_constants/separation = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="Label1" type="Label" parent="HBoxContainer" unique_id=941392572]
+[node name="TextureRect1" type="TextureRect" parent="HBoxContainer" unique_id=680424324]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-text = "vazio"
+expand_mode = 1
 
-[node name="Label2" type="Label" parent="HBoxContainer" unique_id=465305220]
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer" unique_id=1326782410]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-text = "vazio"
+expand_mode = 1
 
-[node name="Label3" type="Label" parent="HBoxContainer" unique_id=1193685628]
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer" unique_id=1666733166]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-text = "vazio"
+expand_mode = 1
 
-[node name="Label4" type="Label" parent="HBoxContainer" unique_id=375516817]
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer" unique_id=1708178175]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-text = "vazio"
+expand_mode = 1
 
-[node name="Label5" type="Label" parent="HBoxContainer" unique_id=592291465]
+[node name="TextureRect5" type="TextureRect" parent="HBoxContainer" unique_id=1334111742]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
-text = "vazio"
+expand_mode = 1
+
+[node name="MoedasContainer" type="HBoxContainer" parent="." unique_id=1995149551]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -113.0
+offset_top = 12.0
+offset_right = -17.0
+offset_bottom = 75.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+
+[node name="TextureRect" type="TextureRect" parent="MoedasContainer" unique_id=137368223]
+layout_mode = 2
+texture = ExtResource("2_oo0fn")
+expand_mode = 2
+
+[node name="Moedas" type="Label" parent="MoedasContainer" unique_id=1031031582]
+layout_mode = 2
+theme_override_constants/line_spacing = 3
+theme_override_fonts/font = SubResource("FontVariation_oo0fn")
+theme_override_font_sizes/font_size = 25
+text = "0"
+
+[node name="RelogioLabel" type="Label" parent="." unique_id=1026586970]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_top = 12.0
+offset_right = 32.0
+offset_bottom = 85.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "00:00
+"
+
+[node name="TimerExpediente" type="Timer" parent="." unique_id=1134175608]
+wait_time = 180.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="TimerExpediente" to="." method="_on_timer_expediente_timeout"]

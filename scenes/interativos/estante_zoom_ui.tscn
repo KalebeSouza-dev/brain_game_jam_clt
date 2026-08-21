@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://b5gmefsik2748"]
 
 [ext_resource type="Script" uid="uid://t0m6lulgqxy6" path="res://estante_zoom_ui.gd" id="1_76wkh"]
-[ext_resource type="Texture2D" uid="uid://dcykmso2hy4k1" path="res://assets/Tiles/acessorios_oficina.png" id="2_6jlwd"]
+[ext_resource type="Texture2D" uid="uid://ck7c4j3fec48j" path="res://assets/entites/peca1.png" id="2_6jlwd"]
+[ext_resource type="Texture2D" uid="uid://n3lshb8s28aa" path="res://assets/entites/peca2.png" id="3_fck0p"]
+[ext_resource type="Texture2D" uid="uid://dwjyh72ey3s0r" path="res://assets/entites/peca3.png" id="4_fhyug"]
+[ext_resource type="Texture2D" uid="uid://bx7chw8e43862" path="res://assets/entites/peca4.png" id="5_q04ls"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sivcj"]
-atlas = ExtResource("2_6jlwd")
-region = Rect2(112, 0, 112, 16)
-
-[node name="EstanteZoomUI" type="CanvasLayer" unique_id=284721341]
+[node name="EstanteZoomUI" type="CanvasLayer" unique_id=1368436563]
 process_mode = 3
 script = ExtResource("1_76wkh")
 
@@ -17,22 +16,59 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 4
 color = Color(0, 0, 0, 0.6784314)
+metadata/_edit_use_anchors_ = true
 
 [node name="Peca1" type="TextureButton" parent="ColorRect" unique_id=1227348639]
 layout_mode = 0
-offset_left = 143.0
-offset_top = 167.0
-offset_right = 255.0
-offset_bottom = 183.0
-texture_normal = SubResource("AtlasTexture_sivcj")
+offset_left = 550.0
+offset_top = 209.0
+offset_right = 681.0
+offset_bottom = 347.0
+texture_normal = ExtResource("2_6jlwd")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Peca2" type="TextureButton" parent="ColorRect" unique_id=1343877741]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 164.0
+offset_right = 539.0
+offset_bottom = 351.0
+texture_normal = ExtResource("3_fck0p")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Peca3" type="TextureButton" parent="ColorRect" unique_id=1478590188]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 191.0
+offset_right = 317.0
+offset_bottom = 365.0
+texture_normal = ExtResource("4_fhyug")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Peca4" type="TextureButton" parent="ColorRect" unique_id=799003008]
+layout_mode = 0
+offset_left = 708.0
+offset_top = 178.0
+offset_right = 865.0
+offset_bottom = 335.0
+texture_normal = ExtResource("5_q04ls")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="Button" type="Button" parent="." unique_id=1264751006]
-offset_left = 7.0
-offset_top = -3.0
-offset_right = 133.0
-offset_bottom = 124.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 132.0
+offset_bottom = 122.0
 text = "X"
 
 [connection signal="pressed" from="ColorRect/Peca1" to="." method="_on_peca_1_pressed"]
+[connection signal="pressed" from="ColorRect/Peca2" to="." method="_on_peca_2_pressed"]
+[connection signal="pressed" from="ColorRect/Peca3" to="." method="_on_peca_3_pressed"]
+[connection signal="pressed" from="ColorRect/Peca4" to="." method="_on_peca_4_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

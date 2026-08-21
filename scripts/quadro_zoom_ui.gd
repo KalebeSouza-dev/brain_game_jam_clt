@@ -9,3 +9,15 @@ func _on_button_pressed() -> void:
 	
 	# 2. Destrói esta tela, fechando a interface
 	queue_free()
+
+
+func _on_alicate_pressed() -> void:
+	Inventario.adicionar_item("ALICATE")
+	
+	$ColorRect/alicate.queue_free()
+
+
+func _on_fenda_pressed() -> void:
+	Inventario.adicionar_item("FENDA")
+	
+	$ColorRect/fenda.queue_free()

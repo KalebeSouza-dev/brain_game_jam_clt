@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c82kh5t30orpp"]
 
 [ext_resource type="Script" uid="uid://udyp0oyw7qar" path="res://scripts/quadro_zoom_ui.gd" id="1_sg6tv"]
+[ext_resource type="Texture2D" uid="uid://bj26ksvgxw7gy" path="res://assets/entites/alicate.png" id="2_daq8w"]
+[ext_resource type="Texture2D" uid="uid://b7otbcfd1isdc" path="res://assets/entites/fenda.png" id="3_gu8rg"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=561946312]
 process_mode = 3
@@ -14,6 +16,39 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.101960786, 0.08235294, 0.2901961, 0.6862745)
 
+[node name="alicate" type="TextureButton" parent="ColorRect" unique_id=807989254]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 140.0
+offset_right = 356.0
+offset_bottom = 396.0
+texture_normal = ExtResource("2_daq8w")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="fenda" type="TextureButton" parent="ColorRect" unique_id=264660985]
+custom_minimum_size = Vector2(190, 190)
+layout_mode = 0
+offset_left = 370.0
+offset_top = 156.0
+offset_right = 626.0
+offset_bottom = 412.0
+texture_normal = ExtResource("3_gu8rg")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="ColorRect" unique_id=215892916]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 0
+offset_left = 650.0
+offset_top = 140.0
+offset_right = 906.0
+offset_bottom = 396.0
+texture_normal = ExtResource("2_daq8w")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="Button" type="Button" parent="." unique_id=176929969]
 offset_left = 14.0
 offset_top = 12.0
@@ -21,4 +56,6 @@ offset_right = 100.0
 offset_bottom = 98.0
 text = "X"
 
+[connection signal="pressed" from="ColorRect/alicate" to="." method="_on_alicate_pressed"]
+[connection signal="pressed" from="ColorRect/fenda" to="." method="_on_fenda_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
