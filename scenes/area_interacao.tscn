@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dgfwi2kmqwl0r"]
+
+[ext_resource type="Script" uid="uid://bxj3mv0mdc5ri" path="res://scripts/area_interacao.gd" id="1_7qwbu"]
+[ext_resource type="PackedScene" uid="uid://c1pi2r4t48phq" path="res://scenes/minigames/mg_fios.tscn" id="2_qghbu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sivcj"]
+size = Vector2(45, 20)
+
+[node name="AreaInteracao" type="Area2D" unique_id=1654981031]
+script = ExtResource("1_7qwbu")
+minigame_scene = ExtResource("2_qghbu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1295494636]
+shape = SubResource("RectangleShape2D_sivcj")

@@ -1,8 +1,24 @@
 [gd_scene format=3 uid="uid://c1pi2r4t48phq"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=1392841265]
+[ext_resource type="Texture2D" uid="uid://bciun71it7auu" path="res://assets/entites/parafuso.png" id="1_3kavi"]
+[ext_resource type="Texture2D" uid="uid://c7icdjfjwgbnn" path="res://assets/entites/fundo_parafusos.png" id="1_5tpg3"]
+[ext_resource type="Script" uid="uid://dpby1qu0f1ptf" path="res://mg_parafusos.gd" id="1_ndg1w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8awpq"]
+atlas = ExtResource("1_3kavi")
+region = Rect2(19.298803, 4.294617, 9.340355, 10.457134)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gsaj"]
+atlas = ExtResource("1_3kavi")
+region = Rect2(3.054716, 4.4976687, 10.558657, 10.254082)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1392841265 node_paths=PackedStringArray("ordem_parafusos")]
+process_mode = 3
+script = ExtResource("1_ndg1w")
+ordem_parafusos = [NodePath("TextureButton2"), NodePath("TextureButton7"), NodePath("TextureButton4"), NodePath("TextureButton9"), NodePath("TextureButton5"), NodePath("TextureButton10"), NodePath("TextureButton3"), NodePath("TextureButton8"), NodePath("TextureButton1"), NodePath("TextureButton6")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=653269235]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -10,9 +26,128 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=794961518]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1.0
+offset_top = 9.0
+offset_right = 964.0
+offset_bottom = 543.0
+texture = ExtResource("1_5tpg3")
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1216985320]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureButton1" type="TextureButton" parent="." unique_id=1216985320]
+offset_left = 2.0
+offset_top = 217.0
+offset_right = 88.0
+offset_bottom = 310.0
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_8awpq")
+texture_pressed = SubResource("AtlasTexture_1gsaj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=158589039]
+offset_left = 141.0
+offset_top = 18.0
+offset_right = 227.0
+offset_bottom = 111.0
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_8awpq")
+texture_pressed = SubResource("AtlasTexture_1gsaj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="." unique_id=1705092118]
+offset_left = 333.0
+offset_top = 14.0
+offset_right = 419.0
+offset_bottom = 107.0
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_8awpq")
+texture_pressed = SubResource("AtlasTexture_1gsaj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="." unique_id=1124666623]
+offset_left = 546.0
+offset_top = 14.0
+offset_right = 632.0
+offset_bottom = 107.0
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_8awpq")
+texture_pressed = SubResource("AtlasTexture_1gsaj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton5" type="TextureButton" parent="." unique_id=2008833509]
+offset_left = 739.0
+offset_top = 17.0
+offset_right = 825.0
+offset_bottom = 110.0
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_8awpq")
+texture_pressed = SubResource("AtlasTexture_1gsaj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton6" type="TextureButton" parent="." unique_id=64934766]
+offset_left = 875.0
+offset_top = 218.0
+offset_right = 961.0
+offset_bottom = 311.0
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_8awpq")
+texture_pressed = SubResource("AtlasTexture_1gsaj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton7" type="TextureButton" parent="." unique_id=1404348016]
+offset_left = 743.0
+offset_top = 417.0
+offset_right = 829.0
+offset_bottom = 510.0
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_8awpq")
+texture_pressed = SubResource("AtlasTexture_1gsaj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton8" type="TextureButton" parent="." unique_id=33143153]
+offset_left = 547.0
+offset_top = 416.0
+offset_right = 633.0
+offset_bottom = 509.0
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_8awpq")
+texture_pressed = SubResource("AtlasTexture_1gsaj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton9" type="TextureButton" parent="." unique_id=227049480]
+offset_left = 338.0
+offset_top = 419.0
+offset_right = 424.0
+offset_bottom = 512.0
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_8awpq")
+texture_pressed = SubResource("AtlasTexture_1gsaj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton10" type="TextureButton" parent="." unique_id=906845123]
+offset_left = 142.0
+offset_top = 416.0
+offset_right = 228.0
+offset_bottom = 509.0
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_8awpq")
+texture_pressed = SubResource("AtlasTexture_1gsaj")
+ignore_texture_size = true
+stretch_mode = 5
